@@ -7,7 +7,7 @@
 The main idea is to provide the policy with relevant past robotic experiences retrieved from a demonstration dataset. Instead of generating actions only from the current observation, the policy retrieves similar trajectories and uses them as additional context for action generation.
 
 ```text
-Task Instruction + Current Observation
+           Current Observation
                   ↓
              Multimodal Encoder
                   ↓
