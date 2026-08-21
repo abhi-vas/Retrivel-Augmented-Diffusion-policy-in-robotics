@@ -57,8 +57,7 @@ The system converts robotic observations and task instructions into vector repre
 Depending on the available data, the encoder can process:
 
 * RGB images
-* Video observations
-* Natural-language instructions
+* Robot actions
 * Robot states
 * Other modalities
 
@@ -73,7 +72,7 @@ Each demonstration is converted into an embedding and stored in a vector databas
 At inference time:
 
 ```text
-Current Instruction + Observation
+       Current  Observation
                 ↓
          Query Embedding
                 ↓
@@ -88,8 +87,7 @@ Current Instruction + Observation
 
 Each stored demonstration can contain:
 
-```text
-Instruction
+```
 Observation Sequence
 Robot State
 Action Sequence
@@ -152,7 +150,7 @@ The complete retrieval pipeline consists of the following steps:
                     Vector Database
                             │
                             │
-New Task + Observation ────┘
+        New Observation ────┘
                             ↓
                        Retrieval
                             ↓
@@ -208,11 +206,9 @@ These retrieved demonstrations are then provided to the diffusion policy:
 ```text
 Current Observation
         +
-Task Instruction
-        +
 Retrieved Demonstrations
         ↓
-Diffusion Transformer
+Diffusion policy Transformer
         ↓
 Predicted Action Sequence
 ```
