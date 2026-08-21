@@ -35,7 +35,7 @@ While this approach can learn complex manipulation behaviors, the policy primari
 Retrieval augmentation introduces an **external memory** containing previously observed robotic demonstrations:
 
 ```text
-Current Task + Observation
+   Current  Observation
           ↓
        Retriever
           ↓
