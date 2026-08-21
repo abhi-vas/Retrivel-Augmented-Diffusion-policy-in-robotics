@@ -333,10 +333,7 @@ Observation → Policy → Action
 The proposed retrieval-augmented approach is:
 
 ```text
-                 ┌──────────────┐
-                 │  Instruction │
-                 └──────┬───────┘
-                        ↓
+                 
                  ┌──────────────┐
                  │ Observation  │
                  └──────┬───────┘
